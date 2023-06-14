@@ -2,12 +2,10 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Player;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
-use Illuminate\Support\integer;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
 
 class PlayerSeeder extends Seeder
 {
@@ -16,13 +14,6 @@ class PlayerSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('players')->insert([
-            'name' => Str::random(10),
-            'club' => Str::random(10),
-            'number' => 10,
-            'image' => Str::random(10),
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
+        Player::factory(10)->create();
     }
 }

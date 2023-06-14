@@ -42,11 +42,11 @@
         <div class="row">
           @foreach($players as $player)
           <div class="col-md-4 mt-5">
-            <div class="card" style="width: 18rem;">
-              <img class="card-img-top" src="{{asset('storage/Player/' . $player->image )}}" alt="Card image cap" style="width:18rem; height: 18rem;">
+            <div class="card" style="width: 20rem;">
+              <img class="card-img-top" src="{{asset('storage/Player/' . $player->image )}}" alt="Card image cap" style="width:20rem; height: 20rem;">
               <div class="card-body">
                 <h5 class="card-title text-center">{{$player->name}}</h5>
-                <p class="card-text">Club: {{$player->club}}</p>
+                <p class="card-text">Country: {{$player->country}}</p>
                 <p class="card-text">Number: {{$player->number}}</p>
                 <div class="d-flex justify-content-center" style="gap: 25px">
                     @can('isAdmin')

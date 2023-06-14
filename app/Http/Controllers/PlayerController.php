@@ -30,7 +30,7 @@ class PlayerController extends Controller
     {
         $validation = $request->validate([
            'name' => 'required',
-           'club' => 'required',
+           'country' => 'required',
            'number' => 'required',
         ]);
 
@@ -40,7 +40,7 @@ class PlayerController extends Controller
 
         Player::create([
             'name' => $request->name,
-            'club' => $request->club,
+            'country' => $request->country,
             'number' => $request->number,
             'image' => $filename
         ]);
@@ -70,7 +70,7 @@ class PlayerController extends Controller
 
     $player->update([
         'name' => $request->name,
-        'club' => $request->club,
+        'country' => $request->country,
         'number' => $request->number,
     ]);
 

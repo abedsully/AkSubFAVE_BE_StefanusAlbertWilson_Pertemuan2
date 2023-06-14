@@ -23,8 +23,8 @@
         </div>
 
         <div class="mb-3">
-            <label for="club" class="form-label">Club</label>
-            <input type="text" name="club" class="form-control">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" name="country" class="form-control">
         </div>
 
         <div class="mb-3">

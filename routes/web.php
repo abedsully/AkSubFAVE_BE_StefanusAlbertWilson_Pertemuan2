@@ -3,6 +3,7 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PlayerController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\CookiesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,3 +32,4 @@ Route::post('/store', [PlayerController::class ,'create'])->middleware('isAdmin'
 Route::get('/update/{id}', [PlayerController::class, 'edit'])->middleware('isAdmin');
 Route::post('/update/{id}', [PlayerController::class, 'update'])->middleware('isAdmin');
 Route::delete('/delete/{id}', [PlayerController::class, 'destroy'])->middleware('isAdmin');
+
